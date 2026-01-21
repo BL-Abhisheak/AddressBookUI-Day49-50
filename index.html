@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AddressBook UI</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f4f7;
+        }
+
+        header{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: rgb(197, 197, 249);            
+        }
+
+        .main-container {
+            width: 1100px;
+            margin: 30px auto;
+            /* background: white; */
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .main-title {
+            text-align: center;
+        }
+
+        .header-div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .form-header,
+        .person-row {
+            display: grid;
+            grid-template-columns: 1.2fr 2fr 1fr 1fr 1fr 1.5fr .8fr;
+            gap: 10px;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+
+        .form-header {
+            font-weight: bold;
+        }
+
+        .person-row input {
+            padding: 8px;
+        }
+
+        .actions button {
+            padding: 6px;
+            margin: 2px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .edit {
+            background: #007bff;
+            color: white;
+        }
+
+        .delete {
+            background: red;
+            color: white;
+        }
+
+        .add-btn {
+            background: #2a28a7;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            cursor: pointer;
+        }
+
+        #sub-container{
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            padding: 20px;
+            width: 100%;
+        }
+    </style>
+    <script src="addperson.js"></script>
+</head>
+
+<body>
+
+<div class="main-container">
+    <header style="align-items: center; text-align: center; margin-bottom: 20px;">
+        <h1>AddressBook UI/UX Design</h1>
+    </header>
+
+    <div id="sub-container">
+    <div class="header-div">
+        <h3>Person Details</h3>
+        <button class="add-btn" type="button" onclick="window.location.href='addperson.html'">+ Add Person</button>
+    </div>
+
+    <form id="addressForm">
+
+        <div class="form-header">
+            <div>Name</div>
+            <div>Address</div>
+            <div>City</div>
+            <div>State</div>
+            <div>Zip</div>
+            <div>Phone</div>
+            <div>Action</div>
+        </div>
+
+      <div id="people">
+
+    <div class="container">
+    <div class="person-row">
+        
+    </div>
+    </div>
+
+   </div>
+
+
+    </form>
+    </div>
+</div>
+
+
+
+</body>
+</html>

@@ -90,74 +90,40 @@
 
 
     <form id="add-person-form">
-        <input type="text" id="fullname" name="fullname" required pattern="[A-Za-z ]{3,}">
-<input type="text" id="address" name="address" required>
-<input type="text" id="city" name="city" required pattern="[A-Za-z ]+">
-<input type="text" id="state" name="state" required pattern="[A-Za-z ]+">
-<input type="text" id="zip" name="zip" required pattern="[0-9]{5,6}">
-<input type="text" id="phone" name="phone" required pattern="[0-9]{10}">
-<div style="align-items: center; text-align: center; gap: 10px; display: flex; justify-content:space-between;">
+        <div>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+        </div>
+        
+        <div>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+        </div>
+        <div>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+        </div>
+        <div>
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+        </div>
+        <div>
+            <label for="zip">Zip Code:</label>
+            <input type="text" id="zip" name="zip" required>
+        </div>
+        <div>
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+        </div>
+        <div style="align-items: center; text-align: center; gap: 10px; display: flex; justify-content:space-between;">
             <button type="submit" id="add-person">Add Person</button>
             <button type="submit" id="reset-form">Reset Form</button>
             <button type="submit" id="view-addressbook" onclick="window.location.href='index.html'">AddressBook</button>
             
         </div>
-
       </div>  
     </div>
       
     </form>
 </body>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("add-person-form");
-
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        const name = fullname.value.trim();
-        const address = address.value.trim();
-        const city = city.value.trim();
-        const state = state.value.trim();
-        const zip = zip.value.trim();
-        const phone = phone.value.trim();
-
-        if (name.length < 3) {
-            alert("Name must be at least 3 characters");
-            return;
-        }
-
-        if (address.length < 5) {
-            alert("Please enter valid address");
-            return;
-        }
-
-        if (!/^[A-Za-z ]+$/.test(city)) {
-            alert("City must contain only letters");
-            return;
-        }
-
-        if (!/^[A-Za-z ]+$/.test(state)) {
-            alert("State must contain only letters");
-            return;
-        }
-
-        if (!/^[0-9]{5,6}$/.test(zip)) {
-            alert("Zip must be 5 or 6 digits");
-            return;
-        }
-
-        if (!/^[0-9]{10}$/.test(phone)) {
-            alert("Phone must be 10 digits");
-            return;
-        }
-
-        alert("Form validated successfully ✅");
-        form.submit();
-    });
-});
-</script>
-
 </html>
